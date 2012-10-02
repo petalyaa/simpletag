@@ -1,4 +1,10 @@
-simpletag
-=========
+Simpletag, a simple photo tagging plugin for Jquery
+===================================================
 
-Simple jquery photo tagging plugin. Based on imgareaselect plugin.
+Simple jquery photo tagging plugin. Based on imgareaselect plugin. Initial build, only based on what i need. Further development will include additional feature to simplify this whole module.
+
+<h2>Requirements :</h2>
+<ul>
+  <li>Jquery (<a href="http://jquery.com/">http://jquery.com/</a>)</li>
+  <li>Imgareaselect (<a href="http://odyniec.net/projects/imgareaselect/">http://odyniec.net/projects/imgareaselect/</a>)</li>
+</ul>
