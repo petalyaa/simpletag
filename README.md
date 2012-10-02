@@ -8,3 +8,6 @@ Simple jquery photo tagging plugin. Based on imgareaselect plugin. Initial build
   <li>Jquery (<a href="http://jquery.com/">http://jquery.com/</a>)</li>
   <li>Imgareaselect (<a href="http://odyniec.net/projects/imgareaselect/">http://odyniec.net/projects/imgareaselect/</a>)</li>
 </ul>
+
+<h2>Demonstration & Usage:</h2>
+Click <a href="http://petalyaa.github.com/simpletag">here</a> for demo page and usage.
