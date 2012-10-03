@@ -34,66 +34,126 @@
           <h1>Simpletag</h1>
           <p>Simple jquery photo tagging plugin. Based on imgareaselect plugin.</p>
           <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/petalyaa">petalyaa</a> (Mohd Khairul Ikhwan Kamarudin)</span>
+          <span class="credits left">Project maintained by <a href="https://github.com/petalyaa">petalyaa</a></span>
           <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></span>
         </div>
 
         <h1>Simpletag, a simple photo tagging plugin for Jquery</h1>
 
 <p>Simple jquery photo tagging plugin. Based on imgareaselect plugin. Initial build, only based on what i need. Further development will include additional feature to simplify this whole module.</p>
-<br>
+
 <h2>Requirements :</h2>
-<ul>
-	<li>Jquery (<a href="http://jquery.com/">http://jquery.com/</a>)</li>
-	<li>Imgareaselect (<a href="http://odyniec.net/projects/imgareaselect/">http://odyniec.net/projects/imgareaselect/</a>)</li>
-</ul>
-<br>
-<h2>Optional(Included in download) :</h2>
-<ul>
-	 <li>Jquery Impromptu Plugin (<a href="http://trentrichardson.com/Impromptu/" target="_blank">http://trentrichardson.com/Impromptu/</a>)</li>
-	 <li>Javascript JSON (<a href="https://github.com/douglascrockford/JSON-js" target="_blank">https://github.com/douglascrockford/JSON-js</a>)</li>
-</ul>
-<br>
-<h2>Usage :</h2>
-	<ol>
-		<li>
-			Include required files
-		</li>
-		<li>Init simpletag
-			<div class="highlight">
-				<pre><span class="nx">$</span><span class="p">(</span><span class="s2">"#image1"</span><span class="p">).</span><span class="nx">simpletag</span><span class="p">();</span></pre>
-			</div>
-		</li>
-		<li>
-			Invoke add method to add tag to photo
-		</li>
-	</ol>
-<br>
-<h2>Demonstration</h2>
-<p>Click <a href="demo/index.html" target="_blank">here</a> to go to demo page.</p>
-<br>
-<h2>Documentation</h2>
-<p>Currently working on it. :)</p>
-<br>
-<h2>Changelog :</h2>
-<ul>
-	<li>0.2 (20121003)
-  	<ul>
-  		<li>Added 'add' method</li>
-  		<li>Fix input source</li>
-  		<li>Added prompt for user input (using <a href="http://trentrichardson.com/Impromptu/" target="_blank">impromptu</a> plugin)</li>
-  		<li>Accept existingList to repopulate existing tag</li>
-  	</ul>
-  </li>
-  <li>0.1 (20121002)
-    <ul>
-      <li>Initial release with minimum feature.</li>
-    </ul>
-  </li>
- </ul>
-<br>
 
+<ul>
+<li>Jquery (<a href="http://jquery.com/">http://jquery.com/</a>)</li>
+<li>Imgareaselect (<a href="http://odyniec.net/projects/imgareaselect/">http://odyniec.net/projects/imgareaselect/</a>)</li>
+</ul><h2>Optional(Included in download) :</h2>
 
+<ul>
+<li>Jquery Impromptu Plugin (<a href="http://trentrichardson.com/Impromptu/">http://trentrichardson.com/Impromptu/</a>)</li>
+<li>Javascript JSON (<a href="https://github.com/douglascrockford/JSON-js">https://github.com/douglascrockford/JSON-js</a>)</li>
+</ul><h2>Usage :</h2>
+
+<ol>
+<li>
+<p>Include required files</p>
+
+<div class="highlight"><pre><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="na">href=</span><span class="s">"css/imgareaselect-animated.css"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"js/jquery-1.8.2.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"js/jquery.imgareaselect.pack.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"js/jquery.simpletag-0.2.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</pre></div>
+</li>
+<li>
+<p>Init simpletag</p>
+
+<div class="highlight"><pre><span class="nx">$</span><span class="p">(</span><span class="s2">"#image1"</span><span class="p">).</span><span class="nx">simpletag</span><span class="p">();</span>
+</pre></div>
+</li>
+<li>
+<p>Invoke add method to add tag to photo</p>
+
+<div class="highlight"><pre><span class="nx">$</span><span class="p">(</span><span class="s2">"#image1"</span><span class="p">).</span><span class="nx">simpletag</span><span class="p">(</span><span class="s2">"add"</span><span class="p">,</span> <span class="s2">"Label1"</span><span class="p">);</span>
+</pre></div>
+</li>
+</ol><h2>Documentation :</h2>
+
+<h4>Options</h4>
+
+<ul>
+<li>
+<code>onSelectionComplete</code> : <br>
+(Optional) Callback function that will be trigger after done making selection. One argument will be supplied which is the selection coordinate. If impromptu is supplied, this will also return another one argument which is json data for form in the impromptu html. If this function return false, then selection will be cancel. Else, you need to return the label to be added to the selection.</li>
+<li>
+<code>initialZIndex</code> : <br>
+(Optional) Initial Z-Index for the first element. Next tag element will increment 1 value from this value.</li>
+<li>
+<code>existingList</code> : <br>
+(Optional) Existing json data of tag to be populate to the image. Format for data in json is as per below :</li>
+</ul><div class="highlight"><pre><span class="kd">var</span> <span class="nx">existingList</span> <span class="o">=</span> <span class="p">[{</span><span class="nx">label</span><span class="o">:</span><span class="s2">"Label 1"</span><span class="p">,</span> <span class="nx">x1</span><span class="o">:</span><span class="mi">100</span><span class="p">,</span> <span class="nx">y1</span><span class="o">:</span><span class="mi">100</span><span class="p">,</span> <span class="nx">height</span><span class="o">:</span><span class="mi">90</span><span class="p">,</span> <span class="nx">width</span><span class="o">:</span><span class="mi">90</span><span class="p">}];</span>
+</pre></div>
+
+<ul>
+<li>
+<code>borderCss</code> : <br>
+(Optional) CSS for selection border EG: <code>2px #6E6E6E solid</code>
+</li>
+<li>
+<code>borderRadius</code> : <br>
+(Optional) Radius for border. Default will be <code>5px</code> if not specified.</li>
+<li>
+<code>autoHide</code> : <br>
+(Optional) Set this value to true will hide the selection after specified time. It will show again once you hover over the selection. Default will be <code>false</code>.</li>
+<li>
+<code>timeoutDelay</code> : <br>
+(Optional) Only use when <code>autoHide</code> is set to true. Delay before the selection dissapear.</li>
+<li>
+<code>impromptu</code> : <br>
+(Optional) This require additional 4 options which is : 
+
+<ul>
+<li>
+<code>enable</code> : <br>
+When this value set to true, simpletag will prompt for message upon making selection.</li>
+<li>
+<code>html</code> : <br>
+Html message to be shown in the prompt</li>
+<li>
+<code>selector</code> : <br>
+Selector for the element to get the HTML from. Can also include form in here.</li>
+<li>
+<code>callback</code> : <br>
+Callback function will be trigger after clicking ok button at the prompt. This is same like <code>onSelectionComplete</code> option. Except it will return two parameters which is the first one is the selection and second is the form object in JSON. You can refer example 3 in the demo page for the usage.</li>
+</ul>
+</li>
+</ul><h2>Demo :</h2>
+
+<ul>
+<li>Tagging using method to add label</li>
+<li>Tagging using <code>onSelectionComplete</code> to add label</li>
+<li>Tagging using 'impromptu' to add label</li>
+<li>Re-populate existing tag using Json</li>
+</ul><h2>Changelog :</h2>
+
+<ul>
+<li>
+<strong>0.2 (20121003)</strong>
+
+<ul>
+<li>Added 'add' method</li>
+<li>Fix input source</li>
+<li>Added prompt for user input (using impromptu plugin)</li>
+<li>Accept existingList to repopulate existing tag</li>
+</ul>
+</li>
+<li>
+<strong>0.1 (20121002)</strong>
+
+<ul>
+<li>Initial release with minimum feature.</li>
+</ul>
+</li>
+</ul>
       </section>
 
     </div>
@@ -104,7 +164,7 @@
           </script>
           <script type="text/javascript">
             try {
-              var pageTracker = _gat._getTracker("jquery plugins simpletags");
+              var pageTracker = _gat._getTracker("jquery, plugins, simpletags, petalyaa, khairul, ikhwan, kamarudin, khairul ikhwan kamarudin, mohd khairul ikhwan, mohd khairul ikhwan kamarudin, facebook jquery tagging, photo tagging, tag");
             pageTracker._trackPageview();
             } catch(err) {}
           </script>
