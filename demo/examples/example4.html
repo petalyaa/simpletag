@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<title>Example 4 : Simpletag</title>
+	
+	<!-- Required -->
+	<link rel="stylesheet" type="text/css" href="../css/imgareaselect/imgareaselect-animated.css" />
+	<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.imgareaselect.pack.js"></script>
+	<script type="text/javascript" src="../js/jquery.simpletag-0.2.js"></script>
+	<!-- End Required -->
+	
+	<!-- Optional -->
+	<link rel="stylesheet" type="text/css" href="../css/impromptu/impromptu.css" />
+	<script type="text/javascript" src="../js/jquery-impromptu.4.0.js"></script>
+	<script type="text/javascript" src="../js/json2.js"></script>
+	<!-- End Optional -->
+	
+	<script type="text/javascript">
+		$(function(){
+			var zIndex = 100;
+			var existingList = [
+				{x1 : 274, y1 : 296, width : 156, height : 94, label : "Area 1"},
+				{x1 : 70, y1 : 263, width : 151, height : 95, label : "Area 2"}
+			];
+			
+			$("#image1").simpletag({
+				autoHide : false,
+				existingList : existingList,
+				impromptu : {
+					enable : true,
+					selector : $("#impromptu-prompt-name"),
+					callback : onSelectionComplete
+				}
+			});
+			
+			$("#add-new").click(function(){
+				$("#image1").simpletag("add");
+			});
+		});
+		
+		function onSelectionComplete(obj, f){
+			var label = f.areaName;
+			obj['label'] = label;
+			var json = JSON.stringify(obj, replacer);
+			console.log(json);
+			
+			return f.areaName;
+		}
+		
+		function replacer(key, value) {
+			if (typeof value === 'number' && !isFinite(value)) {
+				return String(value);
+			}
+			return value;
+		}
+		
+		
+	</script>
+</head>
+<body>
+	<h3>Example with json input for existing tag list.</h3>
+	<ul>
+		<li>{x1 : 274, y1 : 296, width : 156, height : 94, label : "Area 1"}</li>
+		<li>{x1 : 70, y1 : 263, width : 151, height : 95, label : "Area 2"}</li>
+	</ul>
+	<button id="add-new">Add new Area</button><hr />
+	<img src="../images/floor-plan.jpg" id="image1"/>
+	
+	<div id="impromptu-prompt-name" style="display:none;">
+		Please specify area :  <input type="text" name="areaName" id="textbox" value="" />
+	</div>
+</body>
+</html>

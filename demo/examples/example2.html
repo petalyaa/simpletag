@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<title>Example 2 : Simpletag</title>
+	
+	<!-- Required -->
+	<link rel="stylesheet" type="text/css" href="../css/imgareaselect/imgareaselect-animated.css" />
+	<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.imgareaselect.pack.js"></script>
+	<script type="text/javascript" src="../js/jquery.simpletag-0.2.js"></script>
+	<!-- End Required -->
+	
+	<!-- Optional -->
+	<link rel="stylesheet" type="text/css" href="../css/impromptu/impromptu.css" />
+	<script type="text/javascript" src="../js/jquery-impromptu.4.0.js"></script>
+	<script type="text/javascript" src="../js/json2.js"></script>
+	<!-- End Optional -->
+	
+	<script type="text/javascript">
+		$(function(){
+			
+			$("#image1").simpletag({
+				onSelectionComplete : onSelectionComplete
+			});
+			
+			$("#add-new").click(function(){
+				$("#image1").simpletag("add");
+			});
+			
+		});
+
+		function onSelectionComplete(obj, f){
+			return "Label 1";
+		}
+		
+	</script>
+</head>
+<body>
+	<h3>Example tagging using onSelectionComplete to add label.</h3>
+	<p>Click on the button below and start tag any area in the photo.</p>
+	<button id="add-new">Add new Area</button><hr />
+	<img src="../images/floor-plan.jpg" id="image1"/>
+	
+	<div id="impromptu-prompt-name" style="display:none;">
+		Please specify area :  <input type="text" name="areaName" id="textbox" value="" />
+	</div>
+</body>
+</html>
