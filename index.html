@@ -41,22 +41,59 @@
         <h1>Simpletag, a simple photo tagging plugin for Jquery</h1>
 
 <p>Simple jquery photo tagging plugin. Based on imgareaselect plugin. Initial build, only based on what i need. Further development will include additional feature to simplify this whole module.</p>
-
+<br>
 <h2>Requirements :</h2>
-
 <ul>
-<li>Jquery (<a href="http://jquery.com/">http://jquery.com/</a>)</li>
-  <li>Imgareaselect (<a href="http://odyniec.net/projects/imgareaselect/">http://odyniec.net/projects/imgareaselect/</a>)</li>
-</ul><h2>Usage :</h2>
-
-<div class="highlight"><pre><span class="nx">$</span><span class="p">(</span><span class="s2">"#image1"</span><span class="p">).</span><span class="nx">simpletag</span><span class="p">();</span>
-</pre></div>
-
+	<li>Jquery (<a href="http://jquery.com/">http://jquery.com/</a>)</li>
+	<li>Imgareaselect (<a href="http://odyniec.net/projects/imgareaselect/">http://odyniec.net/projects/imgareaselect/</a>)</li>
+</ul>
+<br>
+<h2>Optional(Included in download) :</h2>
+<ul>
+	 <li>Jquery Impromptu Plugin (<a href="http://trentrichardson.com/Impromptu/" target="_blank">http://trentrichardson.com/Impromptu/</a>)</li>
+	 <li>Javascript JSON (<a href="https://github.com/douglascrockford/JSON-js" target="_blank">https://github.com/douglascrockford/JSON-js</a>)</li>
+</ul>
+<br>
+<h2>Usage :</h2>
+	<ol>
+		<li>
+			Include required files
+		</li>
+		<li>Init simpletag
+			<div class="highlight">
+				<pre><span class="nx">$</span><span class="p">(</span><span class="s2">"#image1"</span><span class="p">).</span><span class="nx">simpletag</span><span class="p">();</span></pre>
+			</div>
+		</li>
+		<li>
+			Invoke add method to add tag to photo
+		</li>
+	</ol>
+<br>
 <h2>Demonstration</h2>
 <p>Click <a href="demo/index.html" target="_blank">here</a> to go to demo page.</p>
-
+<br>
 <h2>Documentation</h2>
 <p>Currently working on it. :)</p>
+<br>
+<h2>Changelog :</h2>
+<ul>
+	<li>0.2 (20121003)
+  	<ul>
+  		<li>Added 'add' method</li>
+  		<li>Fix input source</li>
+  		<li>Added prompt for user input (using <a href="http://trentrichardson.com/Impromptu/" target="_blank">impromptu</a> plugin)</li>
+  		<li>Accept existingList to repopulate existing tag</li>
+  	</ul>
+  </li>
+  <li>0.1 (20121002)
+    <ul>
+      <li>Initial release with minimum feature.</li>
+    </ul>
+  </li>
+ </ul>
+<br>
+
+
       </section>
 
     </div>
