@@ -126,7 +126,22 @@ Selector for the element to get the HTML from. Can also include form in here.</l
 Callback function will be trigger after clicking ok button at the prompt. This is same like <code>onSelectionComplete</code> option. Except it will return two parameters which is the first one is the selection and second is the form object in JSON. You can refer example 3 in the demo page for the usage.</li>
 </ul>
 </li>
-</ul><h2>Demo :</h2>
+</ul><h4>Method :</h4>
+
+<ul>
+<li>
+<code>add</code> : <br>
+Call this method to add new tag to the photo. When supplied argument to this method, the argument will be use as a label for the tag. Example :</li>
+</ul><div class="highlight"><pre><span class="c1">// This will create tag with Label 1 as a label.</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">"#image1"</span><span class="p">).</span><span class="nx">simpletag</span><span class="p">(</span><span class="s2">"add"</span><span class="p">,</span> <span class="s2">"Label 1"</span><span class="p">);</span>
+
+<span class="c1">// This can be use if impromptu is enable.</span>
+<span class="c1">// Value for the tag element will be get from </span>
+<span class="c1">// impromptu.</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">"#image1"</span><span class="p">).</span><span class="nx">simpletag</span><span class="p">(</span><span class="s2">"add"</span><span class="p">);</span>
+</pre></div>
+
+<h2>Demo :</h2>
 
 <ul>
 <li>Tagging using method to add label</li>
