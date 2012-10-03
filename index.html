@@ -2,27 +2,15 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-	<title>Simpletag</title>
-	<link rel="stylesheet" type="text/css" href="css/imgareaselect/imgareaselect-animated.css" />
-	<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
-	<script type="text/javascript" src="js/jquery.imgareaselect.pack.js"></script>
-	<script type="text/javascript" src="js/jquery.simpletag.0.1.js"></script>
-	<script type="text/javascript">
-		$(function(){
-			$("#add-new").click(function(){
-				$("#image1").simpletag({
-					onSelectionComplete : onSelectionComplete
-				});
-			});
-		});
-		function onSelectionComplete(obj){
-			// What to do here? save obj to db?
-		}
-		
-	</script>
+	<title>Example</title>
 </head>
 <body>
-	<img src="images/floor-plan.jpg" id="image1" style="position:relative;"/>
-	<a href="#" id="add-new">Add new Area</a>
+	<h3>Example</h3>
+	<ul>
+		<li>Example 1 : Tagging using method to add label. [ <a href="examples/example1.html">Go</a> ]</li>
+		<li>Example 2 : Tagging using onSelectionComplete to add label. [ <a href="examples/example2.html">Go</a> ]</li>
+		<li>Example 3 : Tagging using 'impromptu' to add label. [ <a href="examples/example3.html">Go</a> ]</li>
+		<li>Example 4 : Re-populate existing tag using Json. [ <a href="examples/example4.html">Go</a> ]</li>
+	</ul>
 </body>
 </html>
