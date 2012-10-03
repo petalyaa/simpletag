@@ -1,5 +1,5 @@
 /*
- * jQuery simpletag v0.1 (https://petalyaa.github.com/simpletag)
+ * jQuery simpletag v0.2 (https://petalyaa.github.com/simpletag)
  *
  * Copyright (c) 2012 Khairul Ikhwan
  * https://github.com/petalyaa
