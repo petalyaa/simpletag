@@ -20,18 +20,18 @@ Click <a href="http://petalyaa.github.com/simpletag" target="_blank">here</a> fo
 
 <h2>Changelog :</h2>
 <ul>
-  <li>0.1 (20121002)
-    <ul>
-      <li>Initial release with minimum feature.</li>
-    </ul>
-  </li>
-  <li>0.2 (20121003)
+	<li>0.2 (20121003)
   	<ul>
   		<li>Added 'add' method</li>
   		<li>Fix input source</li>
   		<li>Added prompt for user input (using <a href="http://trentrichardson.com/Impromptu/" target="_blank">impromptu</a> plugin)</li>
   		<li>Accept existingList to repopulate existing tag</li>
   	</ul>
+  </li>
+  <li>0.1 (20121002)
+    <ul>
+      <li>Initial release with minimum feature.</li>
+    </ul>
   </li>
 </ul>
 
